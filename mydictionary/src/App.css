@@ -1,0 +1,151 @@
+.titleline{
+  border: dashed 5px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.nav{
+  position: relative;
+  height: 60px;
+  background-color: #000fff;
+  width: 100%;
+  max-width:  1400px;
+  display: flex;
+  color: white;
+  padding: 20px;
+  margin:auto;
+  font-weight: 600;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.word-add-button{
+  
+  position: absolute;
+  right: 80px;
+ 
+}
+
+
+.wrap{
+  max-width: 1400px;
+  display: flex;
+  margin: auto;
+}
+
+
+.Card{
+  color: white;
+  position: relative;
+  font-size: 20px;
+  border: 2px solid white;
+  padding: 20px;
+  margin: 10px;
+  width: calc((100% -40px) / 3);
+}
+ @media screen and (min-width: 1024px) {
+  .Card {
+  width: calc((100% - 40px) / 3);
+}
+}
+
+@media screen and (min-width: 768px){
+  .Card {
+    width: calc((100% - 20px) / 2);
+}
+} 
+button{
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px 5px 10px;
+  margin: 5px;
+}
+button:hover{
+  background-color: white;
+  color:#000fff
+}
+.wordaddbox{
+ 
+  
+}
+.inputsection{
+  margin:auto;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  max-width: 400px;
+  border: 2px solid white;
+  padding: 50px;
+  
+}
+p{
+  font-size: 20px;
+}
+.savebutton{
+  padding: 5px;
+  width: 100px;
+  margin: auto;
+  margin-top: 40px;
+}
+input{
+  border-color: white;
+  height:25px;
+}
+@font-face {
+  font-family: 'DOSMyungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSMyungjo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+* {
+  color: white;
+  background-color: #000fff;
+	font-family: 'DOSMyungjo';
+}
+
+.App {
+  text-align: center;
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
