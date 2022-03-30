@@ -41,9 +41,13 @@
   border: 2px solid white;
   padding: 20px;
   margin: 10px;
-  width: calc((100% -40px) / 3);
+  width: 400px;
+  flex-direction: row;
+  flex-wrap: wrap; 
+/*   
+  width: calc((100% -40px) / 3); */
 }
- @media screen and (min-width: 1024px) {
+ /* @media screen and (min-width: 1024px) {
   .Card {
   width: calc((100% - 40px) / 3);
 }
@@ -52,8 +56,8 @@
 @media screen and (min-width: 768px){
   .Card {
     width: calc((100% - 20px) / 2);
-}
-} 
+} */
+
 button{
   color: white;
   font-size: 18px;
@@ -87,7 +91,8 @@ p{
   padding: 5px;
   width: 100px;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 4
+  0px;
 }
 input{
   border-color: white;

@@ -1,32 +1,53 @@
 import './App.css';
-import React from 'react';
+import React, {useRef} from 'react';
 import WordAddNav from './WordAddNav.js';
+import Data from './Data';
+import {useDispatch} from "react-redux";
+import {createWordsRedux} from "./redux/modules/WordsRedux";
 import {Link, Route, Switch} from 'react-router-dom';
+import {useHistory} from"react-router-dom";
 
 function WordAdd(){
-  const input_wrap = React.useRef(null);
+  const history = useHistory();
+  const inputRef1 = useRef(null);
+  const inputRef2 = useRef(null);
+  const inputRef3 = useRef(null);
 
-  window.setTimeout(()=>{
-    console.log(input_wrap);
-  }, 1000);
-    return(
+  const dispatch = useDispatch();
+
+  
+  const addWordData = () =>{
+    dispatch(createWordsRedux
+      ({word: inputRef1.current.value,
+      meaning: inputRef2.current.value,
+      example: inputRef3.current.value,}),
+      ); 
+  };
+  
+  
+  return(
       <div >  
         <WordAddNav/>
         <div className='inputsection'>
         <h2>단어 추가하기</h2>
         <p>단어</p>
-        <input ref={input_wrap}></input>
+        <input name= "word" ref={inputRef1} ></input>
         <p>의미</p>
-        <input></input>
+        <input name= "meaning" ref={inputRef2} ></input>
         <p>예문</p>
-        <input></input>
-        <button className='savebutton'>저장하기</button>
-        </div>
+        <input name= "example" ref={inputRef3}></input>
+
+        <button className='savebutton'
+        onClick={()=>{
+          addWordData()
+          history.goBack()
+        }}>저장하기</button> </div>
         
+  
       </div>
 
             
-    );
+  );
   
   }
 
