@@ -3,7 +3,7 @@ import React, {useRef} from 'react';
 import WordAddNav from './WordAddNav.js';
 import Data from './Data';
 import {useDispatch} from "react-redux";
-import {createWordsRedux} from "./redux/modules/WordsRedux";
+import {addWordFB} from "./redux/modules/WordsRedux";
 import {Link, Route, Switch} from 'react-router-dom';
 import {useHistory} from"react-router-dom";
 
@@ -17,11 +17,16 @@ function WordAdd(){
 
   
   const addWordData = () =>{
-    dispatch(createWordsRedux
-      ({word: inputRef1.current.value,
+    // dispatch(createWordsRedux
+    //   ({word: inputRef1.current.value,
+    //   meaning: inputRef2.current.value,
+    //   example: inputRef3.current.value,}),
+    //   ); 
+
+    dispatch(addWordFB({word: inputRef1.current.value,
       meaning: inputRef2.current.value,
-      example: inputRef3.current.value,}),
-      ); 
+      example: inputRef3.current.value,}
+      ))
   };
   
   
